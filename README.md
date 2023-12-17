@@ -10,7 +10,7 @@ The tentative [functional architecture](Functional Architecture.pdf) has been gi
 
 <img alt="Functional Architecture" src="fa_image.png" width="100%" align="left" /> 
 
-</br></br>
+<br/><br/>
 
 ### Project Staus: Initial Stages - Literature Review
 
