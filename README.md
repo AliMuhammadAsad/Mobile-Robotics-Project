@@ -8,9 +8,11 @@ More details can be found in the [Project Proposal](Project Proposal.pdf) docume
 
 The tentative [functional architecture](Functional Architecture.pdf) has been given, and a tentative image is attached below:
 
-<img alt="Functional Architecture" src="fa_image.png" width="100%" align="left" /> 
+<img alt="Functional Architecture" src="fa_image.png" width="100%" align="left" />  
 
 <br/><br/>
+
+---
 
 ### Project Staus: Initial Stages - Literature Review
 
