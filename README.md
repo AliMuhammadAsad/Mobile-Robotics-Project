@@ -12,6 +12,7 @@ The tentative [functional architecture](Functional Architecture.pdf) has been gi
 </div>
 
 <br>
+
 ### Project Staus: Initial Stages - Literature Review
 
 #### Literature Review:
