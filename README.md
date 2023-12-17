@@ -7,7 +7,8 @@ Navigating unfamiliar indoor spaces can be an incredibly challenging task for in
 More details can be found in the [Project Proposal](Project Proposal.pdf) document in the repository.
 
 The tentative [functional architecture](Functional Architecture.pdf) has been given, and a tentative image is attached below:
-<img alt="Functional Architecture" src="fa_image.png" width="75%" /> 
+
+<img alt="Functional Architecture" src="fa_image.png" width="75%" align="left" /> 
 
 ### Project Staus: Initial Stages - Literature Review
 
