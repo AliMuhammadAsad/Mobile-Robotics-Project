@@ -3,9 +3,11 @@
 ### Table of Contents:
 * [Introduction and Project Overview](#Introduction-and-Project-Overview)
 * [The Challenge and Our Solution](#The-Challenge-and-Our-Solution)
+* [Installation and Setup](#Installation-and-Setup)
+    * [Running Our Model](#Running-Our-Model)
 * [Features and Functionality](#Features-and-Functionality)
-    * [Installation and Setup](#Installation-and-Setup)
-    * [Setting up and Running Our Model](#Setting-up-and-Running-Our-Model)
+    * [Robot System Architecture](#Robot-System-Architecture)
+    * [Path Planning](#Path-Planning)
 
 ### Introduction and Project Overview
 This is our project for the course ```Mobile Robotics```, made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi under the supervision of Dr. Basit Memon. 
@@ -23,12 +25,11 @@ Our solution is a smart walking cane, a robotic guide that offers the dual funct
 
 More details can be found in our initial [Project Proposal](Project_Proposal.pdf) document. 
 
-### Features and Functionality
 
-#### Installation and Setup
+### Installation and Setup
 ```MATLAB``` is a requirement, and can be installed [here](https://matlab.mathworks.com/), along with ```Navigation Toolbox```, and ```ROS Toolbox``` add-ons. As stated above, ```Gazebo``` simulator engine is used for simulating the ```ROS``` based robot. More information about Gazebo can be found [here](https://gazebosim.org/home), and installation can be done over [here](https://gazebosim.org/docs). If you are new and don't have Gazebo installed prior, we recommend doing it through a virtual machine, as ROS and Gazebo require a Linux (64-bit) environment. In addition, although we did have an Ubuntu based distro, plugins still weren't supported for our distro, but for only some specific distros. Therefore, we would recommend using a virtual machine, with pre-installed ROS and Gazebo frameworks to save oneself from the headache we suffered. The comprehensive link with platform-specific installation instructions can be found [here](https://www.mathworks.com/support/product/robotics/ros2-vm-installation-instructions-v9.html). In addition, co-simulation between Simulink and Gazebo can be performed via instruction given in the link [here](https://www.mathworks.com/help/robotics/ug/perform-co-simulation-between-simulink-and-gazebo.html).
 
-#### Setting up and Running Our Model
+#### Running Our Model
 Once you've opened ```Gazebo```, open the ```Gazebo Office``` environment on your virtual machine, and note your ip-address. Once you've opened MATLAB, on the host computer run the following commands to initialize ROS global node in MATLAB and connect to the ROS master in the virtual machine through its IP address ipaddress. Replace ipaddress with the IP address of your TurtleBot in virtual machine. 
 
 ```
@@ -47,10 +48,11 @@ The layout of the simulated office environment is like shown:
 
 To run our model, 
 
+### Features and Functionality
 #### Robot System Architecture
 Our system comprises of 4 main components:
 <ul>
-<li>Localization</li>
+<li>Localization (EKF-based Localization)</li>
 <li>Path Planning</li>
 <li>Path Following</li>
 <li>Obstacle Avoidance</li>
@@ -60,6 +62,10 @@ Our system comprises of 4 main components:
 
 The Path Planning and Localization block, takes a destination within the indoor environment and makes use of A-star path planning algorithm to generate a set of way points for the robot to follow. The robot uses the sensor readings and odometric calculations and apply localization techniques to estimate the robot pose. This information is then used by the path following control block to generate velocities. This block also adjusts the velocity according to the movement of the user. This data is then fed to Obstacle Avoidance block which avoids any unforeseen obstacles which are not a part of the map. Finally the control velocities are generated and published to the robot motors. The functional architecture is also shown below in the figure. While traditional models make use of only object detection and obstacle avoidance, our model also makes use of localization and path planning to not only warn the user of potential obstacles, but also guide the user to a set destination if required. 
 
+#### Path Planning
+<img alt="A*" src="Assets/AStar.png" align="right" width="50%" />
+
+We have employed MATLAB and the Robotics System Toolbox to implement a path planning scenario utilizing the A* algorithm within the grid-based Gazebo office environment. We have strategically set starting and goal points within the Cartesian coordinate system, delineating the commencement and destination of our robotic trajectory. The plannerAStarGrid class, driven by the A* algorithm, has dynamically computed an optimal, collision-free path on the Gazebo office map.
 
 <!-- This is our project for the course Mobile Robotics made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi, under the supervision of Dr. Basit Memon. This project aims to develop a simulation on Gazebo, using ROS and MATLAB Simulink to develop a simulation on an autonomous wheeled mobile robot that can help the visually impaired navigate through different settings with ease and efficiency. 
 
