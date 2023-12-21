@@ -74,7 +74,7 @@ We have employed MATLAB and the Robotics System Toolbox to implement a path plan
 ### Path Following
 In the pursuit of precise path following for our robotic system in the indoor navigation project, we employ the Pure Pursuit algorithm — a well-established method for tracking a desired trajectory. The primary objective of this algorithm is to guide the robot along a predefined path, optimizing its trajectory to closely match the intended course. The core idea revolves around determining a point on the path, known as the "lookahead point,” and directing the robot to navigate towards it. The pure pursuit algorithm uses the current robot pose and the waypoints obtained through filtering and path planning from the previous block and generates the velocity commands. 
 
-<img alt="PurePursuit" src="Assets/pure.png" align="left" width="75%" />
+<img alt="PurePursuit" src="Assets/pure.png" align="left" width="100%" />
 
 ### Obstacle Avoidance
 Our robot employs the VFH algorithm for obstacle avoidance, analyzing range sensor data to navigate through environments. Seamlessly integrated into our path-following system, VFH optimizes steering directions for effective obstacle avoidance and precise target pursuit. The system’s adaptive velocity adjustments accommodate both clear and ambiguous steering scenarios, ensuring efficient navigation in diverse environments. 
