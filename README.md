@@ -11,6 +11,9 @@
     * [Path Planning](#Path-Planning)
     * [Path Following](#Path-Following)
     * [Obstacle Avoidance](#Obstacle-Avoidance)
+* [Simulation](#Simulation)
+* [Experimental Results](#Experimental-Results)
+* [Future Work](#Future-Work)
 
 ## Introduction
 This is our project for the course ```Mobile Robotics```, made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi under the supervision of Dr. Basit Memon. This project aims to develop an innovative Smart Walking Cane designed for visually impaired individuals. Leveraging advanced technologies like LIDAR sensors, ROS middleware, and Matlab/Simulink integration with Gazebo, our solution offers enhanced indoor navigation through effective path planning and object detection capabilities
@@ -81,6 +84,31 @@ Our robot employs the VFH algorithm for obstacle avoidance, analyzing range sens
 
 <img alt="Obstacle Avoidance" src="Assets/ob_avoid.png" width="75%"/>
 
+## Simulation
+The working simulation looks like this:
+
+
+## Experimental Results
+In our experimental evaluation, we conducted three test cases to assess the performance of our indoor navigation system using the Smart Walking Cane. The test cases represent scenarios ranging from controlled environments with known maps to more dynamic situations involving unknown obstacles. The integration of A* path planning, localization, Pure Pursuit for path following, and obstacle avoidance through the VFH algorithm is evaluated in these diverse scenarios.
+<ol>
+<li><em>Room-to-Room Navigation in Gazebo Office</em></li>
+The robot was tasked with navigating from one room to another within the Gazebo office environment. The map of the office was known to the robot, and the starting and destination coordinates were provided. The robot successfully generated an A* path, followed the path using Pure Pursuit, and adapted its velocity based on user movements. Obstacle avoidance was not a significant factor in this scenario, as the obstacle location were priorly known by the robot.
+<li><em>Navigation with Unknown Obstacles in Gazebo Office</em></li>
+In the second test case, we introduced unknown obstacles in the Gazebo office environment. The robot was equipped with LiDAR sensors to detect obstacles in real-time. The A* path planning algorithm dynamically adjusted the path to avoid detected obstacles. The robot leveraged localization to estimate its pose accurately, and the Pure Pursuit algorithm ensured precise path following. 
+<li><em>Navigation in Gazebo House</em></li>
+In the third test case, we extended our evaluation to a more complex environment – the Gazebo house. This environment presented additional challenges such as narrow passages, tight corners, and varying room layouts. The robot was tasked with navigating from one point to another while considering the intricacies of the house environment.
+</ol>
+
+The system demonstrated accurate path planning and execution, showcasing seamless integration of algorithms, successfully reaching its destination while adjusting its velocity based on the user's movements, and avoiding obstacles successfully. In addition, the integration of A* path planning, localization, Pure Pursuit, and VFH obstacle avoidance proved effective in handling the complexities of the Gazebo house. These tests demonstrate the versatility of our navigation system in diverse indoor settings. 
+
+## Future Work
+In future developments, our primary focus is on refining the smart walking cane’s design and functionality to better cater to the needs of visually impaired individuals. A crucial step involves transitioning from the current differential drive robot model to a more realistic representation resembling a traditional walking cane. This shift is aimed at enhancing the device’s usability and user acceptance by incorporating physical features like grip and ergonomic design. Additionally, we plan to explore dynamic adaptations based on the user's orientation. Incorporating angular velocity adjustments according to the user's orientation could also further improve the device's responsiveness and adaptability to various navigation scenarios. A comprehensive testing of the system in dynamic environments with moving objects is still something to be done - in order to assess the device's capability to navigate through scenarious where surroundings are not static, thus contributing to a more robust and versatile indoor navigation system.
+
+## Further Details
+For a comprehensive understanding of our project, we invite you to explore our paper that we wrote in addition to this project. The paper, also linked in the repository, can be accessed [here](Smart-Walking-Cane-for-Indoor-Navigation-for-the-Visually-Impaired.pdf)
+
+## Contributions and Acknowledgements
+The project was made possible by the contributions of Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi, who all worked tirelessly over the semester to understand such complex algorithms and concepts, and then were able to implement them for this project. Of course, this wouldn't have been possible without the guidance, and help of our instructor Dr. Abdul Basit Memon who was always available for us, and provided us with insight and proper resources and teaching us so well.
 
 <!-- This is our project for the course Mobile Robotics made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi, under the supervision of Dr. Basit Memon. This project aims to develop a simulation on Gazebo, using ROS and MATLAB Simulink to develop a simulation on an autonomous wheeled mobile robot that can help the visually impaired navigate through different settings with ease and efficiency. 
 
