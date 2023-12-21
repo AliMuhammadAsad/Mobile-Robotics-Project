@@ -1,14 +1,16 @@
-# Autonomous Wheeled Mobile Robots for Indoor Navigation to Assist the Visually Impaired
+# Smart Walking Cane for Indoor Navigation for the Visually Impaired
 
+### Introduction
 This is our project for the course Mobile Robotics made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi, under the supervision of Dr. Basit Memon. This project aims to develop a simulation on Gazebo, using ROS and MATLAB Simulink to develop a simulation on an autonomous wheeled mobile robot that can help the visually impaired navigate through different settings with ease and efficiency. 
 
 Navigating unfamiliar indoor spaces can be an incredibly challenging task for individuals with visual impairments, as they often rely on canes, guide dogs, or verbal directions from others. Our motivation for this project is to provide a more independent and efficient solution, leveraging advanced robotics to assist visually impaired individuals in finding the shortest and safest path to their destination while avoiding obstacles along the way. In this project, the user will hold the robot, which will not only act as a guide but also serve as a walking cane, ensuring a smooth and reliable journey.
 
 More details can be found in the [Project Proposal](Project_Proposal.pdf) document in the repository.
 
-The tentative [functional architecture](Functional_Architecture.pdf) has been given, and a tentative image is attached below:
+The tentative [functional architecture](Functional_it
+Architecture.pdf) has been given, and a tentative image is attached below:
 
-<img alt="Functional Architecture" src="fa_image.png" width="100%" align="left" />  
+<img alt="Functional Architecture" src="Assets/fa_image.png" width="100%" align="left" />  
 
 <pre>
 
