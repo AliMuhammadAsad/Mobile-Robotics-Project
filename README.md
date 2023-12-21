@@ -69,7 +69,9 @@ This will open the Simulink model for our project which can then be run to see t
 
 **Defining WayPoints:**
 
-Way points can be set and changed by opening the input block, and changing the values in the waypoints block. <img alt="Waypoints" src="Assets/waypoints.png" width="20%" align="right"/>
+Way points can be set and changed by opening the input block, and changing the values in the waypoints block. 
+
+<img alt="Waypoints" src="Assets/waypoints.png" width="20%" />
 
 ## Features and Functionality
 ### Robot System Architecture
