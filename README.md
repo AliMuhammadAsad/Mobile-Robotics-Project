@@ -14,6 +14,8 @@
 * [Simulation](#Simulation)
 * [Experimental Results](#Experimental-Results)
 * [Future Work](#Future-Work)
+* [Further Details - Project Paper](#Further-Details)
+* [Contributions and Acknowledgements](#contributions-and-acknowledgements)
 
 ## Introduction
 This is our project for the course ```Mobile Robotics```, made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi under the supervision of Dr. Basit Memon. This project aims to develop an innovative Smart Walking Cane designed for visually impaired individuals. Leveraging advanced technologies like LIDAR sensors, ROS middleware, and Matlab/Simulink integration with Gazebo, our solution offers enhanced indoor navigation through effective path planning and object detection capabilities
