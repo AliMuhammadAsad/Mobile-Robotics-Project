@@ -10,6 +10,7 @@
     * [Robot System Architecture](#Robot-System-Architecture)
     * [Path Planning](#Path-Planning)
     * [Path Following](#Path-Following)
+    * [Obstacle Avoidance](#Obstacle-Avoidance)
 
 ## Introduction
 This is our project for the course ```Mobile Robotics```, made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi under the supervision of Dr. Basit Memon. This project aims to develop an innovative Smart Walking Cane designed for visually impaired individuals. Leveraging advanced technologies like LIDAR sensors, ROS middleware, and Matlab/Simulink integration with Gazebo, our solution offers enhanced indoor navigation through effective path planning and object detection capabilities
@@ -74,6 +75,10 @@ We have employed MATLAB and the Robotics System Toolbox to implement a path plan
 In the pursuit of precise path following for our robotic system in the indoor navigation project, we employ the Pure Pursuit algorithm — a well-established method for tracking a desired trajectory. The primary objective of this algorithm is to guide the robot along a predefined path, optimizing its trajectory to closely match the intended course. The core idea revolves around determining a point on the path, known as the "lookahead point,” and directing the robot to navigate towards it. The pure pursuit algorithm uses the current robot pose and the waypoints obtained through filtering and path planning from the previous block and generates the velocity commands. 
 
 <img alt="PurePursuit" src="Assets/pure.png" align="left" width="75%" />
+
+### Obstacle Avoidance
+Our robot employs the VFH algorithm for obstacle avoidance, analyzing range sensor data to navigate through environments. Seamlessly integrated into our path-following system, VFH optimizes steering directions for effective obstacle avoidance and precise target pursuit. The system’s adaptive velocity adjustments accommodate both clear and ambiguous steering scenarios, ensuring efficient navigation in diverse environments. 
+
 
 <!-- This is our project for the course Mobile Robotics made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi, under the supervision of Dr. Basit Memon. This project aims to develop a simulation on Gazebo, using ROS and MATLAB Simulink to develop a simulation on an autonomous wheeled mobile robot that can help the visually impaired navigate through different settings with ease and efficiency. 
 
