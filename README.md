@@ -1,20 +1,35 @@
 # Smart Walking Cane for Indoor Navigation for the Visually Impaired
 
-### Introduction and Project Overview
+### 1. Introduction and Project Overview
 This is our project for the course ```Mobile Robotics```, made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi under the supervision of Dr. Basit Memon. 
 
 <img alt="cane" src="Assets/cane.png" align="right" width="25%"/>
 
-At the heart of the project is the development of a simulation using ```Gazebo```, integrated with ```ROS``` as a middleware, and ```MATLAB Simulink```. Our focus is on crafting an autonomous mobile robot in the form of a cane that serves not just as a navigational aid but also as a beacon of independance for visually impaired individuals. The image to the right shows an example of a wheeled walking cane that can be modelled as an extension to the Turtlebot simulation model.
+At the heart of the project is the development of a simulation using ```Gazebo```, integrated with ```ROS``` as a middleware, and ```MATLAB Simulink```. Our focus is on crafting an autonomous mobile robot in the form of a cane that serves not just as a navigational aid but also as a beacon of independance for visually impaired individuals. The image to the right shows an example of a wheeled walking cane that can be modelled as an extension to the Turtlebot simulation model. 
 
 <em>*For the purpose of simulation, the navigation cane is modelled as a wheeled mobile robot - the Gazebo Turtlebot serves as a model which acts as an assistive cane in our case.</em>
 
-### The Challenge and Our Solution
+### 2. The Challenge and Our Solution
 Navigating through unfamiliar indoor environments poses a significant challenge for people with visual impairments. Traditional aids like canes or guide dogs, while helpful, have limitations in terms of autonomy and efficiency. Our project aims to transcend these boundaries by harnessing the power of modern robotics.
 
-Our solution is a smart walking cane, a robotic guide that offers the dual functionality of a traditional cane and an intelligent navigational assistant. This autonomous robot is designed to guide the user through complex environments, ensuring the shortest, safest path to their desired destination. By avoiding obstacles and navigating efficiently, the cane promises a new level of independence and safety for its users.
+Our solution is a smart walking cane, a robotic guide that offers the dual functionality of a traditional cane and an intelligent navigational assistant. This autonomous robot is designed to guide the user through complex environments, ensuring the shortest, safest path to their desired destination. By avoiding obstacles and navigating efficiently, the cane promises a new level of independence and safety for its users. In addition, the person's gait and moving speed will also be taken into account to make the cane more user friendly by adjusting its speed accordingly.
 
 More details can be found in our initial [Project Proposal](Project_Proposal.pdf) document. 
+
+### 3. Features and Functionality
+
+#### 3.1 Installation and Setup
+```MATLAB``` is a requirement, and can be installed [here](https://matlab.mathworks.com/), along with ```Navigation Toolbox```, and ```ROS Toolbox``` add-ons. As stated above, ```Gazebo``` simulator engine is used for simulating the ```ROS``` based robot. More information about Gazebo can be found [here](https://gazebosim.org/home), and installation can be done over [here](https://gazebosim.org/docs). If you are new and don't have Gazebo installed prior, we recommend doing it through a virtual machine, as ROS and Gazebo require a Linux (64-bit) environment. In addition, although we did have an Ubuntu based distro, plugins still weren't supported for our distro, but for only some specific distros. Therefore, we would recommend using a virtual machine, with pre-installed ROS and Gazebo frameworks to save oneself from the headache we suffered. The comprehensive link with platform-specific installation instructions can be found [here](https://www.mathworks.com/support/product/robotics/ros2-vm-installation-instructions-v9.html). In addition, co-simulation between Simulink and Gazebo can be performed via instruction given in the link [here](https://www.mathworks.com/help/robotics/ug/perform-co-simulation-between-simulink-and-gazebo.html).
+
+#### 3.2 Setting up Our Model
+Once you've opened ```Gazebo```, open the ```Gazebo Office``` environment on your virtual machine, and note your ip-address. Open the ```mlx``` file given in the [Code](Code) directory in our repository for a more comprehensive setting on the turtlebot from MATLAB. 
+
+Once you've opened MATLAB, on the host computer run the following commands to initialize ROS global node in MATLAB and connect to the ROS master in the virtual machine through its IP address ipaddress. Replace ipaddress with the IP address of your TurtleBot in virtual machine. 
+
+```
+ipaddress = '192.168.128.128'
+rosinit(ipaddress, 11311)
+```
 
 
 
