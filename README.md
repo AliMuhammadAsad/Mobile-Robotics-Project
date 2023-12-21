@@ -31,6 +31,10 @@ ipaddress = '192.168.128.128'
 rosinit(ipaddress, 11311)
 ```
 
+The layout of the simulated office environment is like shown:
+
+<img alt="layout" src="Assets/office.png" width="75%"/>
+
 
 
 <!-- This is our project for the course Mobile Robotics made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi, under the supervision of Dr. Basit Memon. This project aims to develop a simulation on Gazebo, using ROS and MATLAB Simulink to develop a simulation on an autonomous wheeled mobile robot that can help the visually impaired navigate through different settings with ease and efficiency. 
