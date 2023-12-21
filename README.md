@@ -1,5 +1,7 @@
 # Smart Walking Cane for Indoor Navigation for the Visually Impaired
 
+Our project paper can be found [here](Smart-Walking-Cane-for-Indoor-Navigation-for-the-Visually-Impaired.pdf).
+
 ## Table of Contents:
 * [Introduction](#Introduction)
 * [Technologies and Softwares Used](#Technologies-and-Softwares-Used)
@@ -55,7 +57,19 @@ The layout of the simulated office environment is like shown:
 
 <img alt="layout" src="Assets/office.png" width="75%"/>
 
-To run our model, 
+To run our model, open the ```.slx``` file attached in the code using the following code:
+
+```
+open_example('')
+```
+
+This will open the Simulink model for our project which can then be run to see the simulation. The Simulink model looks like this:
+
+!<b>ATTACH SIMULINK MODEL HERE</b>
+
+**Defining WayPoints:**
+
+Way points can be set and changed by opening the input block, and changing the values in the waypoints block. <img alt="Waypoints" src="Assets/waypoints.png" width="20%" align="right"/>
 
 ## Features and Functionality
 ### Robot System Architecture
@@ -110,7 +124,7 @@ In future developments, our primary focus is on refining the smart walking caneâ
 For a comprehensive understanding of our project, we invite you to explore our paper that we wrote in addition to this project. The paper, also linked in the repository, can be accessed [here](Smart-Walking-Cane-for-Indoor-Navigation-for-the-Visually-Impaired.pdf)
 
 ## Contributions and Acknowledgements
-The project was made possible by the contributions of **Lyeba Abid**, **Ali Muhammad Asad**, **Sadiqah Mushtaq**, and **Syed Muhammad Ali Naqvi**, who all worked tirelessly over the semester to understand such complex algorithms and concepts, and then were able to implement them for this project. Of course, this wouldn't have been possible without the guidance, and help of our instructor **Dr. Abdul Basit Memon** who was always available for us, and provided us with insight and proper resources and teaching us so well.
+The project was made possible by the contributions of **Lyeba Abid**, **Ali Muhammad Asad**, **Sadiqah Mushtaq**, and **Syed Muhammad Ali Naqvi**, who all worked tirelessly over the semester to understand such complex algorithms and concepts, and then were able to implement them for this project. Of course, this wouldn't have been possible without the guidance, and help of our instructor **Dr. Basit Memon** who was always available for us, and provided us with insight and proper resources and teaching us so well.
 
 <!-- This is our project for the course Mobile Robotics made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi, under the supervision of Dr. Basit Memon. This project aims to develop a simulation on Gazebo, using ROS and MATLAB Simulink to develop a simulation on an autonomous wheeled mobile robot that can help the visually impaired navigate through different settings with ease and efficiency. 
 
