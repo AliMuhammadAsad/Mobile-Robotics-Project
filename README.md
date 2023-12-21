@@ -55,7 +55,7 @@ rosshutdown
 
 The layout of the simulated office environment is like shown:
 
-<img alt="layout" src="Assets/office.png" width="75%"/>
+<img alt="layout" src="Assets/office.png" width="100%"/>
 
 To run our model, open the ```.slx``` file attached in the code using the following code:
 
@@ -73,6 +73,9 @@ Way points can be set and changed by opening the input block, and changing the v
 
 ## Features and Functionality
 ### Robot System Architecture
+
+<img alt="Functional Architecture" src="Assets/simulinksystem.png" width="100%" />
+
 Our system comprises of 4 main components:
 <ul>
 <li>Localization (EKF-based Localization)</li>
@@ -80,8 +83,6 @@ Our system comprises of 4 main components:
 <li>Path Following</li>
 <li>Obstacle Avoidance</li>
 </ul>
-
-<img alt="Functional Architecture" src="Assets/simulinksystem.png" width="75%" />
 
 The Path Planning and Localization block, takes a destination within the indoor environment and makes use of A-star path planning algorithm to generate a set of way points for the robot to follow. The robot uses the sensor readings and odometric calculations and apply localization techniques to estimate the robot pose. This information is then used by the path following control block to generate velocities. This block also adjusts the velocity according to the movement of the user. This data is then fed to Obstacle Avoidance block which avoids any unforeseen obstacles which are not a part of the map. Finally the control velocities are generated and published to the robot motors. The functional architecture is also shown below in the figure. While traditional models make use of only object detection and obstacle avoidance, our model also makes use of localization and path planning to not only warn the user of potential obstacles, but also guide the user to a set destination if required. 
 
