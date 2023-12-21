@@ -2,10 +2,10 @@
 
 ### Table of Contents:
 * [Introduction and Project Overview](#Introduction-and-Project-Overview)
-* [The Challenge and Our Solution](The-Challenge-and-Our-Solution)
-* [Features and Functionality](Features-and-Functionality)
-    * [Installation and Setup](Installation-and-Setup)
-    * [Setting up and Running Our Model](Setting-up-and-Running-Our-Model)
+* [The Challenge and Our Solution](#The-Challenge-and-Our-Solution)
+* [Features and Functionality](#Features-and-Functionality)
+    * [Installation and Setup](#Installation-and-Setup)
+    * [Setting up and Running Our Model](#Setting-up-and-Running-Our-Model)
 
 ### Introduction and Project Overview
 This is our project for the course ```Mobile Robotics```, made by Lyeba Abid, Ali Muhammad Asad, Sadiqah Mushtaq, and Syed Muhammad Ali Naqvi under the supervision of Dr. Basit Memon. 
