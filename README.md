@@ -63,9 +63,7 @@ To run our model, open the ```.slx``` file attached in the code using the follow
 open_example('')
 ```
 
-This will open the Simulink model for our project which can then be run to see the simulation. The Simulink model looks like this:
-
-!<b>ATTACH SIMULINK MODEL HERE</b>
+This will open the Simulink model for our project which can then be run to see the simulation. The Simulink Model can be seen below in our [system architecture section](#robot-system-architecture). 
 
 **Defining WayPoints:**
 
