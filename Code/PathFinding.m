@@ -1,13 +1,18 @@
-load officemap.mat
+load officemap.mat % replace with any test case occupancy map
 OfficeMap = binaryOccupancyMap(map)
 show(OfficeMap)
-% % Define the binary occupancy grid map
-% map = binaryOccupancyMap(10,10,5);
-% setOccupancy(map,[1 1; 1 2; 2 1; 2 2; 3 3; 3 4; 4 3; 4 4],1);
 
+
+y1 = mapValues(0, -6, 7, 0, 1300)
+x1 = mapValues(0, -2,5,800, 0)
+y2 = mapValues(1, -6, 7, 0, 1300)
+y2 = mapValues(4, -2,5,800, 0)
+
+room1 = [x1 y1]; % replace with workspace out variable from simulink for real time working
+room2 = [x2 y2]
 % Define the start and goal points
-start = [100 100];
-goal = [700 1300];
+start = room1; 
+goal = room2; % destination location labelled as landmark
 % goal1 = fliplr(goal);
 
 
@@ -15,19 +20,20 @@ goal = [700 1300];
 planner = plannerAStarGrid(OfficeMap);
 
 % Define the path
-path = plan(planner, start, goal);
+path = plan(planner, start, goal); % using A start to find path
 
 % Plot the path
 show(planner)
 hold on
-plot(path(:,2),path(:,1),'r','LineWidth',2)
+% plot(path(:,2),path(:,1),'r','LineWidth',2)
 % hold off
 
 % Plot waypoints on the path
 numWaypoints = 10;
-waypoints = interpolatePath(path, numWaypoints);
+waypoints = interpolatePath(path, numWaypoints); % calculate waypoints to follow
 % figure
-plot(waypoints(:, 2), waypoints(:, 1), 'bo', 'MarkerSize', 8, 'LineWidth', 1)
+%plot(waypoints(:, 2), waypoints(:, 1), 'bo', 'MarkerSize', 8, 'LineWidth', 1)
+plot(points(:, 2), points(:, 1), 'bo', 'MarkerSize', 8, 'LineWidth', 1)
 hold off
 
 function waypoints = interpolatePath(path, numWaypoints)
@@ -43,4 +49,16 @@ function waypoints = interpolatePath(path, numWaypoints)
     disp(waypoints);
 end
 
+function mappedValue = mapValues(inputValue, inputMin, inputMax, outputMin, outputMax)
+    % Map input values from one range to another
 
+    % Check if inputValue is within the input range
+    if inputValue < inputMin
+        inputValue = inputMin;
+    elseif inputValue > inputMax
+        inputValue = inputMax;
+    end
+
+    % Perform the mapping
+    mappedValue = ((inputValue - inputMin) / (inputMax - inputMin)) * (outputMax - outputMin) + outputMin;
+end
