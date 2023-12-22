@@ -1,12 +1,13 @@
+function Waypoints = PathFinding() % function is called at simulation initalization as preloadFcn
 load officemap.mat % replace with any test case occupancy map
 OfficeMap = binaryOccupancyMap(map)
 show(OfficeMap)
 
 
-y1 = mapValues(0, -6, 7, 0, 1300)
-x1 = mapValues(0, -2,5,800, 0)
-y2 = mapValues(1, -6, 7, 0, 1300)
-y2 = mapValues(4, -2,5,800, 0)
+y1 = int32(mapValues(0, -6, 7, 0, 1300))
+x1 = int32(mapValues(0, -2,5,800, 0))
+x2 = int32(mapValues(-3, -6, 7, 0, 1300))
+y2 = int32(mapValues(4, -2,5,800, 0))
 
 room1 = [x1 y1]; % replace with workspace out variable from simulink for real time working
 room2 = [x2 y2]
@@ -30,11 +31,23 @@ hold on
 
 % Plot waypoints on the path
 numWaypoints = 10;
-waypoints = interpolatePath(path, numWaypoints); % calculate waypoints to follow
+Waypoints = interpolatePath(path, numWaypoints); % calculate waypoints to follow
 % figure
 %plot(waypoints(:, 2), waypoints(:, 1), 'bo', 'MarkerSize', 8, 'LineWidth', 1)
-plot(points(:, 2), points(:, 1), 'bo', 'MarkerSize', 8, 'LineWidth', 1)
+plot(Waypoints(:, 2), Waypoints(:, 1), 'bo', 'MarkerSize', 8, 'LineWidth', 1)
 hold off
+
+% remaps waypoints to cordinate system in Gazebo simulation for path
+% follwing
+for i = 1:size(Waypoints, 1)
+    Waypoints(i,1) = mapValues(Waypoints(i,1), 0, 1300, -6, 7);
+    Waypoints(i,2) = mapValues(Waypoints(i,2),800, 0,  -2,5);
+end
+
+Waypoints = [Waypoints ; nan nan]
+assignin('base', 'Waypoints', Waypoints);  % Modify the input variable in the base workspace
+
+end
 
 function waypoints = interpolatePath(path, numWaypoints)
     % Linearly interpolate between points on the path
